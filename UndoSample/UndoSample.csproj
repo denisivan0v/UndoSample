@@ -54,8 +54,10 @@
     <Compile Include="Shapes\IShape.cs" />
     <Compile Include="Shapes\Point.cs" />
     <Compile Include="Shapes\Rectangle.cs" />
-    <Compile Include="Shapes\Shape.cs" />
     <Compile Include="Shapes\Triangle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Shapes" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
