@@ -22,6 +22,7 @@ namespace UndoSample.Commands
 
         public void Undo()
         {
+            Console.WriteLine("Undoing move action...");
             _shape.Move(-_dx, -_dy);
             Console.WriteLine("Move action undone");
         }

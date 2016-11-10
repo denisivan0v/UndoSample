@@ -27,6 +27,7 @@ namespace UndoSample.Commands
 
         public void Undo()
         {
+            Console.WriteLine("Undoing resize action...");
             _shape.Resize(_oldWidth, _oldHeigth);
             Console.WriteLine("Resize action undone");
         }

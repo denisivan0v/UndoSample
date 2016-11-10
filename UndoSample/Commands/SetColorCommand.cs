@@ -23,6 +23,7 @@ namespace UndoSample.Commands
 
         public void Undo()
         {
+            Console.WriteLine("Undoing set color action...");
             _shape.SetColor(_oldValue);
             Console.WriteLine("Set color action undone");
         }

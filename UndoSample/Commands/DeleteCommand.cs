@@ -23,8 +23,9 @@ namespace UndoSample.Commands
 
         public void Undo()
         {
+            Console.WriteLine("Undoing delete action...");
             _canvas.Add(_id, _shape);
-            Console.WriteLine("Delete  action undone");
+            Console.WriteLine("Delete action undone");
         }
     }
 }

@@ -33,10 +33,19 @@ namespace UndoSample
             shape = canvas.Peek(shapeId);
             actionDispatcher.Execute(new ResizeCommand(shape, 2, 2));
 
+            Console.WriteLine("Select id of the shape to delete");
+            input = Console.ReadLine();
+
+            shapeId = Guid.Parse(input);
+            actionDispatcher.Execute(new DeleteCommand(shapeId, canvas));
+            Console.WriteLine($"Shapes at canvas {string.Join(", ", canvas.List())}");
+
             Console.WriteLine("How many actions you want to undo?");
             input = Console.ReadLine();
 
             actionDispatcher.Undo(int.Parse(input));
+
+            Console.WriteLine($"Shapes at canvas {string.Join(", ", canvas.List())}");
         }
 
         private static void Init(Canvas canvas)
